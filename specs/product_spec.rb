@@ -1,5 +1,6 @@
 require('minitest')
 require('minitest/autorun')
+require('minitest/rg')
 require_relative('../models/product')
 
 class ProductTest < MiniTest::Test
@@ -13,4 +14,4 @@ class ProductTest < MiniTest::Test
 
 
 
-end 
+end
