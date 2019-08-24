@@ -12,10 +12,24 @@ class Product
     # @manufacturer_id = options['manufacturer_id'].to_i
   end
 
-  def get_margin()
-    return @sell_price - @buy_cost
+  # def get_margin()
+  #   return @sell_price - @buy_cost
+  # end
+
+  def save
+
   end
 
+  def self.all
 
+  end
+
+  def self.find(id)
+
+  end
+
+  def self.delete_all
+
+  end 
 
 end
