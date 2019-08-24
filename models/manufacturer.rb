@@ -31,11 +31,17 @@ class Manufacturer
   end
 
   def self.all
-
+    sql = "SELECT * FROM manufacturers"
+    results = SqlRunner.run(sql)
+    return results.map{ |hash| Manufacturer.new(hash) }
   end
 
   def self.find(id)
-
+    sql = "SELECT * FROM manufacturers WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    manufacturer = Manufacturer.new(result)
+    return manufacturer
   end
 
   def self.delete_all

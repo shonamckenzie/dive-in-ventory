@@ -37,11 +37,17 @@ class Product
   end
 
   def self.all
-
+    sql = "SELECT * FROM products"
+    results = SqlRunner.run(sql)
+    return results.map{ |hash| Product.new(hash)}
   end
 
   def self.find(id)
-
+    sql = "SELECT * FROM products WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)[0]
+    product = Product.new(result)
+    return product
   end
 
   def self.delete_all
