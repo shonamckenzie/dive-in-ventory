@@ -39,7 +39,8 @@ class Manufacturer
   end
 
   def self.delete_all
-
+    sql = "DELETE FROM manufacturers"
+    SqlRunner.run(sql)
   end
 
 end

@@ -45,7 +45,8 @@ class Product
   end
 
   def self.delete_all
-
+    sql = "DELETE FROM products"
+    SqlRunner.run(sql)
   end
 
 end

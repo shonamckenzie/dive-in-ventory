@@ -1,8 +1,8 @@
 require_relative('../models/product')
 require_relative('../models/manufacturer')
 
-# Product.delete_all
-# Manufacturer.delete_all
+Product.delete_all
+Manufacturer.delete_all
 
 manufacturer1 = Manufacturer.new({ 'name' => 'scubapro', 'country' => 'usa', 'contact' => 'jeff', 'rating' => 5 })
 manufacturer1.save()
