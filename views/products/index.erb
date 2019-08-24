@@ -1,0 +1,9 @@
+<% @products.each do |product| %>
+  <p>Name: <%= product.name.capitalize() %></p>
+  <p>Description: <%= product.description.capitalize() %></p>
+  <p>Quantity: <%= product.quantity() %></p>
+  <p>Buy Cost: <%= product.buy_cost.to_f %></p>
+  <p>Sales Price: <%= product.sell_price.to_f %></p>
+  <p><a href="/products/<%= product.id %>">Show Product</a></p>
+  <hr />
+  <% end %>
