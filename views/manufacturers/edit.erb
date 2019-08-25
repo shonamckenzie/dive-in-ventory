@@ -1,0 +1,16 @@
+<form method="post" action="/manufacturers/<%= @manufacturer.id %>" >
+
+  <label for="name-field">Name:</label>
+  <input type="text" name="name" id="name-field" value="<%= @manufacturer.name.capitalize %>" />
+
+  <label for="country-field">Country:</label>
+  <input type="text" name="country" id="country-field" value="<%= @manufacturer.country.capitalize %>" />
+
+  <label for="contact-field">Contact:</label>
+  <input type="text" name="contact" id="contact-field" value="<%= @manufacturer.contact.capitalize %>"/>
+
+  <label for="rating-field">Rating:</label>
+  <input type="number" name="rating" id="rating-field" value="<%= @manufacturer.rating %>" />
+
+  <input type="submit" value="Edit Manufacturer">
+</form>

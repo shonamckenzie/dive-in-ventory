@@ -36,6 +36,19 @@ class Manufacturer
     SqlRunner.run(sql, values)
   end
 
+  def update
+    sql = "UPDATE manufacturers SET (
+    name,
+    country,
+    contact,
+    rating
+    ) = (
+      $1, $2, $3, $4
+      ) WHERE id = $5"
+    values = [@name, @country, @contact, @rating, @id]
+    SqlRunner.run(sql, values)  
+  end
+
   def self.all
     sql = "SELECT * FROM manufacturers"
     results = SqlRunner.run(sql)
