@@ -1,0 +1,9 @@
+<p>Name: <%= @product.name.capitalize %></p>
+<p>Description: <%= @product.description %></p>
+<p>Quantity: <%= @product.quantity %></p>
+<p>Buy Cost: <%= @product.buy_cost %></p>
+<p>Sell Price: <%= @product.sell_price %></p>
+<p><a href="/products/<%= @product.id %>/edit">Edit Product</a></p>
+<form method="post" action="/products/<%= @product.id %>/delete">
+  <input type="submit" value="Delete Product">
+</form>

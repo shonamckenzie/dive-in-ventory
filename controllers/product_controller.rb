@@ -20,8 +20,8 @@ end
 
 # show
 get '/products/:id' do
-  @products = Product.find( params[:id] )
-  @manufacturers = Manufacturer.all()
+  @product = Product.find( params[:id] )
+  @manufacturer = Manufacturer.all()
   erb( :'/products/show')
 end
 
