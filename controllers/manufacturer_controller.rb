@@ -19,14 +19,14 @@ end
 # show
 get '/manufacturers/:id' do
   @manufacturer = Manufacturer.find( params[:id] )
-  erb( :"manufacturers/show")
+  erb( :"/manufacturers/show")
 end
 
 # create
 post '/manufacturers' do
   @manufacturer = Manufacturer.new( params )
   @manufacturer.save()
-  erb( :create )
+  erb( :"/manufacturers/create" )
 end
 
 # edit
