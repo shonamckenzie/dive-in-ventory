@@ -12,14 +12,39 @@ get '/products' do
   erb( :"/products/index" )
 end
 
-# show
-
 # new
+get 'products/new' do
+  @manufacturers = Manufacturer.all()
+  erb( :'/products/new')
+end
+
+# show
+get '/products/:id' do
+  @products = Product.find( params[:id] )
+  @manufacturers = Manufacturer.all()
+  erb( :'/products/show')
+end
 
 # create
-
+post '/products' do
+  @product = Product.new( params )
+  @product.save()
+  erb( :'products/create')
+end
 # edit
-
+get '/products/:id/edit' do
+  @product = Product.find( params[:id] )
+  @manufacturer = Manufacturer.all()
+  erb( :'/products/edit')
+end
 # update
-
+post '/products/:id' do
+  Product.new( params ).update
+  redirect to '/products'
+end
 # delete
+post '/products/:id/delete' do
+  product = Product.find( params[:id] )
+  product.delete()
+  redirect to '/products'
+end
