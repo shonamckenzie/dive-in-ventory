@@ -36,10 +36,26 @@ class Product
     @id = result.first()['id'].to_i
   end
 
-  def delete 
+  def delete
     sql = "DELETE FROM products WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+
+  def update
+    sql = "UPDATE products SET (
+    name,
+    description,
+    quantity,
+    buy_cost,
+    sell_price,
+    manufacturer_id
+    ) =
+    (
+      $1, $2, $3, $4, $5, $6
+      ) WHERE id = $7"
+    values = [@name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id]
+    SqlRunner.run(sql, values)  
   end
 
   def self.all
