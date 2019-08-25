@@ -41,3 +41,8 @@ post '/manufacturers/:id' do
   redirect to '/manufacturers'
 end
 # delete
+post '/manufacturers/:id/delete' do
+  manufacturer = Manufacturer.find( params[:id] )
+  manufacturer.delete()
+  redirect to '/manufacturers'
+end
