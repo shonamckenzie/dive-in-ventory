@@ -54,8 +54,8 @@ class Product
     (
       $1, $2, $3, $4, $5, $6
       ) WHERE id = $7"
-    values = [@name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id]
-    SqlRunner.run(sql, values)  
+    values = [@name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id, @id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all
