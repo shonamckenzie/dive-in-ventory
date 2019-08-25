@@ -27,7 +27,13 @@ class Manufacturer
       RETURNING id"
     values = [@name, @country, @contact, @rating]
     results = SqlRunner.run(sql, values)
-    @id = results.first()['id'].to_i
+    @id = results.first()['id']
+  end
+
+  def delete
+    sql = "DELETE FROM manufacturers WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all
@@ -39,7 +45,7 @@ class Manufacturer
   def self.find(id)
     sql = "SELECT * FROM manufacturers WHERE id = $1"
     values = [id]
-    result = SqlRunner.run(sql, values)
+    result = SqlRunner.run(sql, values).first()
     manufacturer = Manufacturer.new(result)
     return manufacturer
   end

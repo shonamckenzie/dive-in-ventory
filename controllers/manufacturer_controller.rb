@@ -11,11 +11,23 @@ get '/manufacturers' do
   erb( :"/manufacturers/index" )
 end
 
-# show
-
 # new
+get '/manufacturers/new' do
+  erb( :"/manufacturers/new")
+end
+
+# show
+get '/manufacturers/:id' do
+  @manufacturer = Manufacturer.find( params[:id] )
+  erb( :"manufacturers/show")
+end
 
 # create
+post '/manufacturers' do
+  @manufacturer = Manufacturer.new( params )
+  @manufacturer.save()
+  erb( :create )
+end
 
 # edit
 
