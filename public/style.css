@@ -1,9 +1,20 @@
 
 body {
   padding: 30px;
-  font-family: 'Rye', cursive;
-  color: #ccad00;
+  font-family: 'Merriweather', cursive;
+  color: black;
   background-image: url("images/turtle.gif");
-  background-size: 100% auto;
+  background-size: 100%;
   background-repeat: no-repeat;
+}
+
+input[type="submit"] {
+  text-transform: uppercase;
+  font-family: 'Special Elite', cursive;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
