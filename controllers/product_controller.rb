@@ -6,7 +6,7 @@ require_relative('../models/manufacturer')
 also_reload( '../models/*' )
 
 # index
-get '/products' do
+get '/inventory' do
   @products = Product.all()
   @manufacturers = Manufacturer.all()
   erb( :"/products/index" )
