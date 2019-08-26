@@ -15,6 +15,10 @@ input[type="submit"] {
 
 nav ul li {
   list-style-type: none;
+  display: inline-block;
+}
+
+h1 {
   display: flex;
   justify-content: center;
 }
