@@ -22,3 +22,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.low_stock{
+  color: yellow;
+}

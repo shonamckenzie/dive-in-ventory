@@ -1,9 +1,11 @@
 <p><a href="/products/new">New Product</a></p>
 
+
+
 <% @products.each do |product| %>
   <p>Name: <%= product.name.capitalize() %></p>
   <p>Description: <%= product.description.capitalize() %></p>
-  <p>Quantity: <%= product.quantity() %></p>
+  <p class="low_stock">Quantity: <%= product.quantity() %></p>
   <p>Buy Cost: £<%= sprintf "%.2f", product.buy_cost %></p>
   <p>Sales Price: £<%= sprintf "%.2f", product.sell_price %></p>
   <p><a href="/products/<%= product.id %>">Show Product</a></p>

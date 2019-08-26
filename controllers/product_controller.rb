@@ -40,11 +40,11 @@ end
 # update
 post '/products/:id' do
   Product.new( params ).update
-  redirect to '/products'
+  redirect to '/inventory'
 end
 # delete
 post '/products/:id/delete' do
   product = Product.find( params[:id] )
   product.delete()
-  redirect to '/products'
+  redirect to '/inventory'
 end
