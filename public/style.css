@@ -23,6 +23,14 @@ h1 {
   justify-content: center;
 }
 
+.stock_out{
+  color: red;
+}
+
 .low_stock{
   color: orange;
+}
+
+.ok_stock{
+  color: green;
 }

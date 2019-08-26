@@ -63,9 +63,13 @@ class Product
     SqlRunner.run(sql, values)
   end
 
-  def low_stock
-    if @quantity <= 3
+  def stock_highlight
+    if @quantity == 0
+      'stock_out'
+    elsif @quantity <= 3
       'low_stock'
+    elsif @quantity > 3
+      'ok_stock'
     end
   end
 
