@@ -10,8 +10,8 @@ class Product
     @name = options['name']
     @description = options['description']
     @quantity = options['quantity'].to_i
-    @buy_cost = options['buy_cost'].to_f
-    @sell_price = options['sell_price'].to_f
+    @buy_cost = options['buy_cost']
+    @sell_price = options['sell_price']
     @manufacturer_id = options['manufacturer_id'].to_i
   end
 
@@ -59,7 +59,7 @@ class Product
   end
 
   def self.all
-    sql = "SELECT * FROM products"
+    sql = "SELECT * FROM products ORDER BY description"
     results = SqlRunner.run(sql)
     return results.map{ |hash| Product.new(hash)}
   end

@@ -13,7 +13,7 @@ get '/products' do
 end
 
 # new
-get 'products/new' do
+get '/products/new' do
   @manufacturers = Manufacturer.all()
   erb( :'/products/new')
 end
@@ -29,7 +29,7 @@ end
 post '/products' do
   @product = Product.new( params )
   @product.save()
-  erb( :'products/create')
+  erb( :'/products/create')
 end
 # edit
 get '/products/:id/edit' do
