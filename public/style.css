@@ -1,0 +1,9 @@
+
+body {
+  padding: 30px;
+  font-family: 'Rye', cursive;
+  color: #ccad00;
+  background-image: url("images/turtle.gif");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
