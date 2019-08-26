@@ -16,6 +16,12 @@ input[type="submit"] {
 nav ul li {
   list-style-type: none;
   display: inline-block;
+  padding-left: 30px;
+  padding-bottom: 15px;
+}
+
+li {
+  color: black;
 }
 
 h1 {
@@ -23,21 +29,34 @@ h1 {
   justify-content: center;
 }
 
-/* td {
+th {
   padding-left: 10px;
-} */
+  padding-bottom: 5px;
+}
 
-.stock_out{
+td {
+  padding-left: 10px;
+}
+
+a {
+  color: #664200;
+}
+
+p {
+  padding-left: 15px;
+}
+
+.stock_out {
   color: red;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
-.low_stock{
+.low_stock {
   color: orange;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
-.ok_stock{
-  color: green;
-  padding-left: 15px;
+.ok_stock {
+  color: #003300;
+  padding-left: 30px;
 }
