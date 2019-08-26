@@ -30,7 +30,7 @@ post '/manufacturers' do
 end
 
 # edit
-get 'manufacturers/:id/edit' do
+get '/manufacturers/:id/edit' do
   @manufacturer = Manufacturer.find( params[:id] )
   erb( :"/manufacturers/edit")
 end

@@ -2,7 +2,7 @@
 <p>Country: <%= @manufacturer.country.capitalize() %></p>
 <p>Contact: <%= @manufacturer.contact.capitalize() %></p>
 <p>Rating: <%= @manufacturer.rating %></p>
-<p><a href="/manufacturers/<%= @manufacturer.id %>.edit">Edit Manufacturer</a></p>
+<p><a href="/manufacturers/<%= @manufacturer.id %>/edit">Edit Manufacturer</a></p>
 <form method="post" action="/manufacturers/<%= @manufacturer.id %>/delete">
   <input type="submit" value="Delete Manufacturer">
 </form>
