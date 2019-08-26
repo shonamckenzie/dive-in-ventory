@@ -23,14 +23,21 @@ h1 {
   justify-content: center;
 }
 
+/* td {
+  padding-left: 10px;
+} */
+
 .stock_out{
   color: red;
+  padding-left: 15px;
 }
 
 .low_stock{
   color: orange;
+  padding-left: 15px;
 }
 
 .ok_stock{
   color: green;
+  padding-left: 15px;
 }
