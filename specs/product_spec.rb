@@ -29,7 +29,10 @@ class ProductTest < MiniTest::Test
     assert_equal('mk25', @product1.name)
   end
 
-
+  def test_get_low_stock
+    @product3.low_stock
+    assert_equal('low_stock')
+  end
 
 
 end

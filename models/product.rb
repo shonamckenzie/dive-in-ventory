@@ -63,6 +63,17 @@ class Product
     SqlRunner.run(sql, values)
   end
 
+  def low_stock
+    if @quantity <= 3
+      'low_stock'
+    end
+  end
+
+  # def out_of_stock
+  #   if @quantity <= 0
+  #     return out_of_stock
+  # end
+
   def self.all
     sql = "SELECT * FROM products ORDER BY description"
     results = SqlRunner.run(sql)
