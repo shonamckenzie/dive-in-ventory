@@ -4,8 +4,6 @@
   <p>Quantity: <%= product.quantity() %></p>
   <p>Buy Cost: £<%= sprintf "%.2f", product.buy_cost %></p>
   <p>Sales Price: £<%= sprintf "%.2f", product.sell_price %></p>
-  <p>Manufacturer: <%= %></p>
-  <!-- how to get manufacturer name -->
   <p><a href="/products/<%= product.id %>">Show Product</a></p>
   <hr />
   <% end %>

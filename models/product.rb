@@ -2,8 +2,8 @@ require_relative('../db/sql_runner')
 
 class Product
 
-  attr_reader :id, :manufacturer_id
-  attr_accessor :name, :description, :quantity, :buy_cost, :sell_price
+  attr_reader :id
+  attr_accessor :name, :description, :quantity, :buy_cost, :sell_price, :manufacturer_id
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -40,6 +40,11 @@ class Product
     sql = "DELETE FROM products WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+
+  def manufacturer()
+    manufacturer = Manufacturer.find(@manufacturer_id)
+    return manufacturer
   end
 
   def update
