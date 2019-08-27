@@ -76,6 +76,13 @@ class Product
     end
   end
 
+  def self.filter_by_description(description)
+    sql = "SELECT * FROM products WHERE description = $1"
+    values = [description]
+    result = SqlRunner.run(sql, values)
+    product = Product.new(result)
+    return product
+  end
 
   def self.all
     sql = "SELECT * FROM products ORDER BY description"
