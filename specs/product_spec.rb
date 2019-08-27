@@ -32,7 +32,7 @@ class ProductTest < MiniTest::Test
   def test_highlight_stock
     # binding.pry
     @product3.quantity()
-    assert_equal('low_stock', @product3.stock_highlight)
+    assert_equal('stock-level--low', @product3.stock_highlight)
   end
 
 
