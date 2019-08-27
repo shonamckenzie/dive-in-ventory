@@ -3,7 +3,7 @@
 <p>Quantity: <%= @product.quantity %></p>
 <p>Buy Cost: £<%= sprintf "%.2f", @product.buy_cost %></p>
 <p>Sell Price: £<%= sprintf "%.2f", @product.sell_price %></p>
-<p>Markup: £<%= sprintf "%.2f", @product.get_margin.ceil() %></p>
+<p>Markup: £<%= sprintf "%.2f", @product.get_margin() %></p>
 <p>Manufacturer: <%= @product.manufacturer.name.capitalize %></p>
 <p><a href="/products/<%= @product.id %>/edit">Edit Product</a></p>
 <form method="post" action="/products/<%= @product.id %>/delete">
