@@ -65,15 +65,15 @@ form {
 }
 
 .stock-level--critical {
-  color: red;
+  color: #ff3333;
 }
 
 .stock-level--low {
-  color: orange;
+  color: #e68a00;
 }
 
 .stock-level--ok {
-  color: #003300;
+  color: #2eb82e;
 }
 
 .card {
