@@ -21,7 +21,7 @@ class ProductTest < MiniTest::Test
   def test_get_margin
     # binding.pry
     @product1.get_margin()
-    assert_equal(95.00, 95.00)
+    assert_equal(95.00, @product1.get_margin)
   end
 
   def test_get_product_name

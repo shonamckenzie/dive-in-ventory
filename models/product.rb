@@ -16,8 +16,12 @@ class Product
   end
 
   def get_margin()
-    return @sell_price - @buy_cost
+    sql = "SELECT sell_price - buy_cost FROM products where id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)[0]
+    return result
   end
+
 
   def save
     sql = "INSERT INTO products (
