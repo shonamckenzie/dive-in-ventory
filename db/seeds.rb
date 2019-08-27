@@ -16,7 +16,7 @@ manufacturer3.save()
 manufacturer4.save()
 
 #
-product1 = Product.new({ 'name' => 'mk25', 'description' => 'regulator', 'quantity' => 5, 'buy_cost' => 580, 'sell_price' => 675, 'manufacturer_id' => manufacturer1.id })
+product1 = Product.new({ 'name' => 'mk25', 'description' => 'regulator', 'quantity' => 5, 'buy_cost' => 580.95, 'sell_price' => 675, 'manufacturer_id' => manufacturer1.id })
 product2 = Product.new({ 'name' => 'xforce', 'description' => 'bcd', 'quantity' => 8, 'buy_cost' => 395, 'sell_price' => 450, 'manufacturer_id' => manufacturer1.id })
 product3 = Product.new({ 'name' => 'apnea', 'description' => 'wetsuit', 'quantity' => 2, 'buy_cost' => 125, 'sell_price' => 180, 'manufacturer_id' => manufacturer2.id })
 product4 = Product.new({ 'name' => 'avanti', 'description' => 'fins', 'quantity' => 1, 'buy_cost' => 70, 'sell_price' => 85, 'manufacturer_id' => manufacturer2.id })

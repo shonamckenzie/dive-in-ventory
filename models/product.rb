@@ -10,13 +10,13 @@ class Product
     @name = options['name']
     @description = options['description']
     @quantity = options['quantity'].to_i
-    @buy_cost = options['buy_cost'].to_i
-    @sell_price = options['sell_price'].to_i
+    @buy_cost = options['buy_cost'].to_f
+    @sell_price = options['sell_price'].to_f
     @manufacturer_id = options['manufacturer_id'].to_i
   end
 
   def get_margin()
-    @sell_price - @buy_cost 
+    @sell_price - @buy_cost
   end
 
 
