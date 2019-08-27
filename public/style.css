@@ -47,6 +47,11 @@ img {
   background-color: white;
   height: 10%;
   width: 10%;
+  margin-left: 10px;
+}
+
+form {
+  padding: 10px;
 }
 
 .stock-level {
