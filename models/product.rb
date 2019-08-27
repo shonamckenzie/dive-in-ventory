@@ -73,10 +73,6 @@ class Product
     end
   end
 
-  # def out_of_stock
-  #   if @quantity <= 0
-  #     return out_of_stock
-  # end
 
   def self.all
     sql = "SELECT * FROM products ORDER BY description"

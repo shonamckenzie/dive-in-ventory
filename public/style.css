@@ -2,7 +2,7 @@
 body {
   padding: 30px;
   font-family: 'Merriweather', cursive;
-  color: black;
+
   background-image: url("images/turtle.gif");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -20,9 +20,6 @@ nav ul li {
   padding-bottom: 15px;
 }
 
-li {
-  color: black;
-}
 
 h1 {
   display: flex;
