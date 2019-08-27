@@ -15,9 +15,9 @@ class Product
     @manufacturer_id = options['manufacturer_id'].to_i
   end
 
-  # def get_margin()
-  #   return @sell_price - @buy_cost
-  # end
+  def get_margin()
+    return @sell_price - @buy_cost
+  end
 
   def save
     sql = "INSERT INTO products (
