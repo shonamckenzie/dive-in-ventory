@@ -16,5 +16,6 @@ CREATE TABLE products (
   quantity INT4,
   buy_cost REAL,
   sell_price REAL,
+  image VARCHAR,
   manufacturer_id INT4 REFERENCES manufacturers(id) ON DELETE SET NULL
 );
