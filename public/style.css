@@ -43,6 +43,12 @@ p {
   padding-left: 15px;
 }
 
+img {
+  background-color: white;
+  height: 10%;
+  width: 10%
+}
+
 .stock-level {
   padding-left: 30px;
 }
