@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Product
 
   attr_reader :id
-  attr_accessor :name, :description, :quantity, :buy_cost, :sell_price, :manufacturer_id
+  attr_accessor :name, :description, :quantity, :buy_cost, :sell_price, :image, :manufacturer_id
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -12,6 +12,7 @@ class Product
     @quantity = options['quantity'].to_i
     @buy_cost = options['buy_cost'].to_f
     @sell_price = options['sell_price'].to_f
+    @image = options['image']
     @manufacturer_id = options['manufacturer_id'].to_i
   end
 
@@ -27,12 +28,13 @@ class Product
     quantity,
     buy_cost,
     sell_price,
+    image,
     manufacturer_id
     ) VALUES (
-      $1, $2, $3, $4, $5, $6
+      $1, $2, $3, $4, $5, $6, $7
       )
       RETURNING id"
-    values = [@name, @description, @quantity, @buy_cost, @sell_price, @manufacturer_id]
+    values = [@name, @description, @quantity, @buy_cost, @sell_price, @image, @manufacturer_id]
     result = SqlRunner.run(sql, values)
     @id = result.first()['id'].to_i
   end
