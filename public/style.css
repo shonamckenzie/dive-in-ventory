@@ -53,10 +53,8 @@ p {
 
 .stock-level--low {
   color: orange;
-  padding-left: 30px;
 }
 
 .stock-level--ok {
   color: #003300;
-  padding-left: 30px;
 }
