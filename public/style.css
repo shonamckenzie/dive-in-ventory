@@ -43,17 +43,20 @@ p {
   padding-left: 15px;
 }
 
-.stock_out {
-  color: red;
+.stock-level {
   padding-left: 30px;
 }
 
-.low_stock {
+.stock-level--critical {
+  color: red;
+}
+
+.stock-level--low {
   color: orange;
   padding-left: 30px;
 }
 
-.ok_stock {
+.stock-level--ok {
   color: #003300;
   padding-left: 30px;
 }

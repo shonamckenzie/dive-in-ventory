@@ -13,7 +13,7 @@
 <tr>
   <td><%= product.name.capitalize() %></td>
   <td><%= product.description.capitalize() %></td>
-  <td class="<%= product.stock_highlight %>"><%= product.quantity() %></td>
+  <td class="stock-level <%= product.stock_highlight %>"><%= product.quantity() %></td>
   <td>£<%= sprintf "%.2f", product.buy_cost %></td>
   <td>£<%= sprintf "%.2f", product.sell_price %></td>
   <td><a href="/products/<%= product.id %>">Show Product</a></td>

@@ -65,11 +65,11 @@ class Product
 
   def stock_highlight
     if @quantity == 0
-      'stock_out'
+      'stock-level--critical'
     elsif @quantity <= 3
-      'low_stock'
+      'stock-level--low'
     elsif @quantity > 3
-      'ok_stock'
+      'stock-level--ok'
     end
   end
 
