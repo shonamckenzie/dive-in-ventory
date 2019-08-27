@@ -16,7 +16,7 @@ class Product
   end
 
   def get_margin()
-    @sell_price - @buy_cost
+    @sell_price - @buy_cost 
   end
 
 
