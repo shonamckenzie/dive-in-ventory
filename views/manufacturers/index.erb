@@ -3,22 +3,16 @@
   <input type="submit" value="New Manufacturer">
 </form>
 
-<table class="table-man">
-  <tr>
-    <th>Manufacturer  </th>
-    <th>Country  </th>
-    <th>Contact  </th>
-    <th>Rating  </th>
-  </tr>
+  <% @manufacturers.each do |manufacturer| %>
+  <div class="row">
+  <div class="column">
+  <div class="card">
 
-<% @manufacturers.each do |manufacturer| %>
-  <tr>
-  <td><%= manufacturer.name.capitalize() %></td>
-  <td><%= manufacturer.country.capitalize() %></td>
-  <td><%= manufacturer.contact.capitalize() %></td>
-  <td><%= manufacturer.rating %></td>
-  <td><a href="/manufacturers/<%= manufacturer.id %>">Show Manufacturer</a></td>
-  </tr>
+  <p>Name:    <%= manufacturer.name.capitalize() %></p>
+  <p>Country: <%= manufacturer.country.capitalize() %></p>
+  <p>Contact: <%= manufacturer.contact.capitalize() %></p>
+  <p><a href="/manufacturers/<%= manufacturer.id %>">Show Manufacturer</a></p>
+  </div>
+  </div>
+  </div>
   <% end %>
-
-</table>
