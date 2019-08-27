@@ -10,16 +10,13 @@ class Product
     @name = options['name']
     @description = options['description']
     @quantity = options['quantity'].to_i
-    @buy_cost = options['buy_cost']
-    @sell_price = options['sell_price']
+    @buy_cost = options['buy_cost'].to_i
+    @sell_price = options['sell_price'].to_i
     @manufacturer_id = options['manufacturer_id'].to_i
   end
 
   def get_margin()
-    sql = "SELECT sell_price - buy_cost FROM products where id = $1"
-    values = [id]
-    result = SqlRunner.run(sql, values)[0]
-    return result
+    @sell_price - @buy_cost
   end
 
 
