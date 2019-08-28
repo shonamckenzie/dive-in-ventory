@@ -1,7 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
-require_relative('controllers/manufacturer_controller')
-require_relative('controllers/product_controller')
+require_relative('controllers/manufacturers_controller')
+require_relative('controllers/products_controller')
 
 also_reload('./models/*')
 
