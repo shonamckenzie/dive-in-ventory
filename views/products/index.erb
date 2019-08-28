@@ -2,12 +2,17 @@
   <input type="submit" value="New Product">
 </form>
 
+<div>
 <label for="description_select">Select Category:</label>
 <select name="description" id="description_select">
   <% @pdesc.each do |description| %>
   <option value=<%= description.capitalize %>><%= description.capitalize %></option>
   <% end %>
 </select>
+<form method="get" action="/products/filter">
+  <input type="submit" value="Filter">
+</form>
+</div>
 
 <table class="table-prod">
   <tr>
