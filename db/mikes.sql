@@ -6,6 +6,8 @@ CREATE TABLE manufacturers (
   name VARCHAR(255),
   country VARCHAR(255),
   contact VARCHAR(255),
+  phone VARCHAR(255),
+  notes VARCHAR(255),
   rating INT4
 );
 
