@@ -3,7 +3,6 @@
 </form>
 
 <form method="get" action="/products/filter">
-  <div class="filter">
   <label for="description_select">Select Category:</label>
   <select name="description" id="description_select">
     <% @pdesc = []%>
@@ -17,7 +16,7 @@
   </select>
   <input type="submit" value="Find">
 </form>
-</div>
+
 
 <table class="table-prod">
   <tr>
