@@ -9,6 +9,11 @@ also_reload( '../models/*' )
 get '/inventory' do
   @products = Product.all()
   @manufacturers = Manufacturer.all()
+  @pdesc = []
+  @products.each do |product|
+    @pdesc << product.description
+  end
+  @pdesc.uniq!
   erb( :"/products/index" )
 end
 
