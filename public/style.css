@@ -92,3 +92,7 @@ form {
   float: left;
   padding: 0 30px;
 }
+
+.filter {
+  display: inline-block;;
+}

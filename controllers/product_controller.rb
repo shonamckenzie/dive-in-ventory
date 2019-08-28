@@ -6,14 +6,10 @@ require_relative('../models/manufacturer')
 also_reload( '../models/*' )
 
 # index
-get '/inventory' do
+get '/products' do
   @products = Product.all()
+  @all_products = @products
   @manufacturers = Manufacturer.all()
-  @pdesc = []
-  @products.each do |product|
-    @pdesc << product.description
-  end
-  @pdesc.uniq!
   erb( :"/products/index" )
 end
 
@@ -24,8 +20,9 @@ get '/products/new' do
 end
 
 get '/products/filter' do
-  @products = Product.all()
-  erb( :'/products/filter')
+  @all_products = Product.all
+  @products = Product.filter_by_description( params[:description])
+  erb( :'/products/index')
 end
 
 # show
