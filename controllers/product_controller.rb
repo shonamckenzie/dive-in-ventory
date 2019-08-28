@@ -19,6 +19,7 @@ get '/products/new' do
   erb( :'/products/new')
 end
 
+# this is not a restful route, should be able to merge and use conditional clause with the main products view
 get '/products/filter' do
   @all_products = Product.all
   @products = Product.filter_by_description( params[:description])
