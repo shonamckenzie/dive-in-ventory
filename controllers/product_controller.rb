@@ -23,6 +23,11 @@ get '/products/new' do
   erb( :'/products/new')
 end
 
+get '/products/filter' do
+  @products = Product.all()
+  erb( :'/products/filter')
+end
+
 # show
 get '/products/:id' do
   @product = Product.find( params[:id] )
