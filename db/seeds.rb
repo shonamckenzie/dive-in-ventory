@@ -4,12 +4,12 @@ require_relative('../models/manufacturer')
 Product.delete_all
 Manufacturer.delete_all
 
-manufacturer1 = Manufacturer.new({ 'name' => 'scubapro', 'country' => 'usa', 'contact' => 'jeff', 'rating' => 5 })
+manufacturer1 = Manufacturer.new({ 'name' => 'scubapro', 'country' => 'usa', 'contact' => 'jeff', 'phone' => '001 601 5647', 'notes' => 'September discount 10%', 'rating' => 5 })
 manufacturer1.save()
 
-manufacturer2 = Manufacturer.new({ 'name' => 'mares', 'country' => 'italy', 'contact' => 'lucio', 'rating' => 4 })
-manufacturer3 = Manufacturer.new({ 'name' => 'suunto', 'country' => 'finland', 'contact' => 'elena', 'rating' => 5 })
-manufacturer4 = Manufacturer.new({ 'name' => 'apeks', 'country' => 'uk', 'contact' => 'elke', 'rating' => 4 })
+manufacturer2 = Manufacturer.new({ 'name' => 'mares', 'country' => 'italy', 'contact' => 'lucio', 'phone' => '0039 986475', 'notes' => 'October discount 10% on spend over £1000', 'rating' => 4 })
+manufacturer3 = Manufacturer.new({ 'name' => 'suunto', 'country' => 'finland', 'contact' => 'elena', 'phone' => '358 6573849', 'notes' => '', 'rating' => 5 })
+manufacturer4 = Manufacturer.new({ 'name' => 'apeks', 'country' => 'uk', 'contact' => 'elke', 'phone' => '0161 2452438', 'notes' => '', 'rating' => 4 })
 
 manufacturer2.save()
 manufacturer3.save()

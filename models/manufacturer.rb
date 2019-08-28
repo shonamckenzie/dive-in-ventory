@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Manufacturer
 
-  attr_accessor :name, :country, :contact, :rating
+  attr_accessor :name, :country, :contact, :rating, :phone, :notes
   attr_reader :id
 
   def initialize( options )
@@ -10,6 +10,8 @@ class Manufacturer
     @name = options['name']
     @country = options['country']
     @contact = options['contact']
+    @phone = options['phone']
+    @notes = options['notes']
     @rating = options['rating'].to_i
   end
 
@@ -19,13 +21,15 @@ class Manufacturer
     name,
     country,
     contact,
+    phone,
+    notes,
     rating
     )
     VALUES(
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5, $6
       )
       RETURNING id"
-    values = [@name, @country, @contact, @rating]
+    values = [@name, @country, @contact, @phone, @notes, @rating]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id']
   end
@@ -45,8 +49,8 @@ class Manufacturer
     ) = (
       $1, $2, $3, $4
       ) WHERE id = $5"
-    values = [@name, @country, @contact, @rating, @id]
-    SqlRunner.run(sql, values)  
+    values = [@name, @country, @contact, @phone, @notes, @rating, @id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all
