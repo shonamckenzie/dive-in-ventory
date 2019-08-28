@@ -9,6 +9,12 @@
   <label for="contact-field">Contact:</label>
   <input type="text" name="contact" id="contact-field" value="<%= @manufacturer.contact.capitalize %>"/>
 
+  <label for="phone-field">Phone:</label>
+  <input type="text" name="phone" id="phone-field" value="<%= @manufacturer.phone %>"/>
+
+  <label for="notes-field">Notes:</label>
+  <input type="text" name="notes" id="notes-field" value="<%= @manufacturer.notes.capitalize %>"/>
+
   <label for="rating-field">Rating:</label>
   <input type="number" name="rating" id="rating-field" value="<%= @manufacturer.rating %>" />
 

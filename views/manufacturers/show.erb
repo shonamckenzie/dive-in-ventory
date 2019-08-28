@@ -1,6 +1,8 @@
 <p>Name: <%= @manufacturer.name.capitalize() %></p>
 <p>Country: <%= @manufacturer.country.capitalize() %></p>
 <p>Contact: <%= @manufacturer.contact.capitalize() %></p>
+<p>Phone: <%= @manufacturer.phone() %></p>
+<p>Notes: <%= @manufacturer.notes.capitalize() %></p>
 <p>Rating: <%= @manufacturer.rating %></p>
 <form method="get" action="/manufacturers/<%= @manufacturer.id %>/edit">
   <input type="submit" value="Edit Manufacturer">
