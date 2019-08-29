@@ -45,10 +45,12 @@ class Manufacturer
     name,
     country,
     contact,
+    phone,
+    notes,
     rating
     ) = (
-      $1, $2, $3, $4
-      ) WHERE id = $5"
+      $1, $2, $3, $4, $5, $6
+      ) WHERE id = $7"
     values = [@name, @country, @contact, @phone, @notes, @rating, @id]
     SqlRunner.run(sql, values)
   end
