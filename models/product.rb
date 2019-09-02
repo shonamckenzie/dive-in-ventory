@@ -66,6 +66,12 @@ class Product
     SqlRunner.run(sql, values)
   end
 
+# highlight each product quantity based on set conditions
+# if quantity is 0, mark as critical/out of stock, else
+# if quantity is less than or equal to 3, mark as low stock, else
+# if quantity greater than 3, mark as in stock
+# use in conjunction with CSS class - red out of stock, orange - low stock, green - stock good
+# method called on product index view
   def stock_highlight
     if @quantity == 0
       'stock-level--critical'
@@ -75,6 +81,7 @@ class Product
       'stock-level--ok'
     end
   end
+
 
   def self.filter_by_description(description)
     sql = "SELECT * FROM products WHERE description = $1"
