@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative('controllers/manufacturers_controller')
